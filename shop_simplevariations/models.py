@@ -56,7 +56,7 @@ class OptionGroup(models.Model):
     slug = models.SlugField() # Used in forms for example
     description = models.CharField(max_length=255, blank=True, null=True)
     products = models.ManyToManyField(Product, related_name="option_groups",
-                                      blank=True, null=True)
+                                      blank=True)
 
     def __unicode__(self):
         return self.name
